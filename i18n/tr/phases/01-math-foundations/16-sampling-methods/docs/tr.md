@@ -3,7 +3,7 @@
 > Örnekleme, AI'nin olasılık alanını nasıl keşfettiğini gösterir.
 
 **Type:** Build
-**Language:**Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 1, Lessons 06-07 (Probability, Bayes' Theorem)
 **Time:** ~120 minutes
 
@@ -117,7 +117,8 @@ Algorithm:
   3. If u < p(x) / (M * q(x)), accept x
   4. Otherwise, reject and go to step 1
 
-Acceptance rate = 1/M
+Acceptance rate = Z/M, where Z is the integral of p(x)
+                (Z = 1, so the rate is 1/M, when p is normalized)
 ```
 
 Sınır ne kadar sıkı olursa o kadar .$M$Bu, reddetme örneğinin boyutunun büyük kısmının reddedilmesi nedeniyle, yüksek boyutlarda kabul oranı eksponensal olarak düşer. Bu, reddetme örneğinin boyutsuzluğunun lanetidir.
@@ -607,6 +608,8 @@ def gumbel_softmax(logits, temperature):
 Düşen sıcaklığın çıkışın bir sıcaktan uzak bir vektöre nasıl yaklaştığını göster.
 
 Tüm görsellemeler ile birlikte tam uygulamalar `code/sampling.py`- Evet .
+
+TypeScript portu çalıştırıldı `code/sampling.ts`Kendi ürünü rastgele jeneratörünü kullanıyor, bu yüzden rastgele sayıları Python çıkışından farklıdır.
 
 ## Kullan
 

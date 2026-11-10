@@ -3,7 +3,7 @@
 > Mesafe fonksiyonunuz "aynı" ne anlama geldiğini belirler.
 
 **Type:** Build
-**Language:**Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 1, Lessons 01 (Linear Algebra Intuition), 02 (Vectors, Matrices & Operations)
 **Time:** ~90 minutes
 
@@ -102,7 +102,7 @@ L1 ve L2 Lp normunun özel durumlarıdır:
 \lVert x \rVert_p = (|x_1|^p + |x_2|^p + \cdots + |x_n|^p)^{1/p}
 ```
 
- Farklı değerler$p$Farklı şekilli "birlik topları" üretmek (kötüden 1 mesafede bulunan tüm noktaların toplamı):
+ Farklı değerler$p$Farklı şekilli "birlik topları" üretir (başlangıçtan en fazla 1 mesafede bulunan tüm noktaların toplamı; aşağıdaki şekiller sınırlarıdır):
 
 ```
 p=1:    Diamond shape      (corners on axes)
@@ -436,7 +436,7 @@ norm-unit-balls
 
 ### Adım 1: Tüm norm ve mesafe fonksiyonları
 
-Bakın .`code/distances.py`Her fonksiyon, sadece temel Python matematikini kullanarak sıfırdan inşa edilmiştir.
+Bakın .`code/distances.py`Bu işlemler, Python'un temel matematiklerini kullanarak tamamlanmıştır.`code/distances.ts`Aynı fonksiyon ve demo ile bir TypeScript portu.
 
 ### Adım 2: Aynı veriler, farklı mesafeler, farklı komşular
 

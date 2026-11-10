@@ -3,7 +3,7 @@
 > Mỗi framework bán cùng một demo (nhà nghiên cứu xây dựng một báo cáo) và ẩn cùng một lỗi (chế hoạch trạng thái chiến đấu với lớp dàn xếp). Chọn framework có trừu tượng phù hợp với hình dạng của vấn đề của bạn; tất cả những thứ khác là dán bạn viết hai lần.
 
 **Type:** Learn
-**Languages:** Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 11 · 09 (Function Calling), Phase 11 · 16 (LangGraph)
 **Time:** ~45 minutes
 
@@ -35,7 +35,7 @@ Sự trừu tượng cốt lõi của một framework là thứ bạn vẽ trên
 - **LangGraph**→ bạn vẽ một biểu đồ. nút là bước, cạnh là chuyển tiếp, và đối tượng trạng thái ở mỗi điểm được gõ. mô hình tâm lý là một máy trạng thái.
 - **CrewAI**→ bạn vẽ một biểu đồ tổ chức. Mỗi vai trò có mô tả công việc và một người quản lý hướng các nhiệm vụ. mô hình tâm lý là một nhóm nhỏ các chuyên gia.
 - **AutoGen**2 đại lý nhắn tin với nhau; một đại lý thứ ba gia nhập nếu bạn cần một người điều hành. Mô hình tâm lý là trò chuyện.
-- **Agno**→ bạn vẽ một hộp đơn với các công cụ treo trên nó. đặt các hộp cạnh nhau cho một đội. mô hình tâm lý là "đồng hành với pin bao gồm".
+- **Agno**→ bạn vẽ một hộp đơn với các công cụ treo trên nó. đặt các hộp cạnh nhau cho một nhóm. mô hình tâm lý là "đồng hành với pin bao gồm".
 
 ### Câu hỏi nhà nước
 

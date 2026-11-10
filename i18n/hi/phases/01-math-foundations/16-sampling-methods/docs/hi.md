@@ -3,7 +3,7 @@
 > नमूनाकरण यह है कि कैसे AI संभावनाओं के अंतरिक्ष की खोज करता है।
 
 **Type:** Build
-**Language:**पायथन
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 1, Lessons 06-07 (Probability, Bayes' Theorem)
 **Time:** ~120 minutes
 
@@ -117,7 +117,8 @@ Algorithm:
   3. If u < p(x) / (M * q(x)), accept x
   4. Otherwise, reject and go to step 1
 
-Acceptance rate = 1/M
+Acceptance rate = Z/M, where Z is the integral of p(x)
+                (Z = 1, so the rate is 1/M, when p is normalized)
 ```
 
 जितना अधिक कसकर सीमा $M$, स्वीकृति दर जितनी अधिक है। कम आयामों (1-3) में, अस्वीकृति नमूना लेने का काम अच्छी तरह से होता है। उच्च आयामों में, स्वीकृति दर तेजी से गिरती है क्योंकि अधिकांश प्रस्ताव मात्रा अस्वीकार हो जाती है। यह अस्वीकृति नमूना लेने के लिए आयामता का अभिशाप है।
@@ -607,6 +608,8 @@ def gumbel_softmax(logits, temperature):
 तापमान में कमी से आउटपुट एक ही गर्म वेक्टर के करीब कैसे पहुंचता है, इसका प्रदर्शन करें।
 
 सभी दृश्यों के साथ पूर्ण कार्यान्वयन में हैं `code/sampling.py`. .
+
+टाइपस्क्रिप्ट पोर्ट में है `code/sampling.ts`यह अपने स्वयं के बीज यादृच्छिक जनरेटर का उपयोग करता है, इसलिए इसके यादृच्छिक संख्या पायथन आउटपुट से अलग है.
 
 ## इसका प्रयोग करें
 

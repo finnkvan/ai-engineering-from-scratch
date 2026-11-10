@@ -3,7 +3,7 @@
 > Hình đồ là cấu trúc dữ liệu của mối quan hệ. Nếu dữ liệu của bạn có kết nối, bạn cần lý thuyết đồ đồ.
 
 **Type:** Build
-**Language:**Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 1, Lessons 01-03 (linear algebra, matrices)
 **Time:** ~90 minutes
 
@@ -266,6 +266,9 @@ class Graph:
     def degree(self, node):
         return len(self.adj[node])
 
+    def weighted_degree(self, node):
+        return sum(self.adj[node].values())
+
     def adjacency_matrix(self):
         import numpy as np
         A = np.zeros((self.n, self.n))
@@ -278,7 +281,7 @@ class Graph:
         import numpy as np
         D = np.zeros((self.n, self.n))
         for i in range(self.n):
-            D[i][i] = self.degree(i)
+            D[i][i] = self.weighted_degree(i)
         return D
 
     def laplacian(self):

@@ -3,7 +3,7 @@
 > Điểm nổi là một sự trừu tượng bị rò rỉ. Nó sẽ cắn bạn trong khi tập luyện, và bạn sẽ không thấy nó đến.
 
 **Type:** Build
-**Language:**Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 1, Lessons 01-04
 **Time:** ~120 minutes
 
@@ -184,7 +184,7 @@ exp(101) = 7.31e43
 exp(102) = 1.99e44
 sum      = 2.99e44
 
-These overflow float32 (max ~3.4e38)? No, 2.69e43 < 3.4e38? Actually:
+2.69e43 > 3.4e38, the float32 maximum, so every term overflows.
 exp(88.7) is already at the float32 limit.
 exp(100) = inf in float32.
 ```
@@ -558,7 +558,7 @@ check_tensor("bad",  [1.0, float('nan'), 3.0])
 check_tensor("ugly", [1.0, float('inf'), 3.0])
 ```
 
-Nhìn xem`code/numerical.py`cho các triển khai hoàn chỉnh với tất cả các trường hợp cạnh được chứng minh.
+Nhìn xem`code/numerical.py`cho các thực hiện hoàn chỉnh với tất cả các trường hợp cạnh được chứng minh.`code/numerical.ts`là một cổng TypeScript với các chức năng và demo tương tự.
 
 ## Chuyển nó
 

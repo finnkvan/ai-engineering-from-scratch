@@ -3,7 +3,7 @@
 > Chọn sai và mọi thứ sẽ bị phá vỡ.
 
 **Type:** Build
-**Language:**Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 1, Lessons 01 (Linear Algebra Intuition), 02 (Vectors, Matrices & Operations)
 **Time:** ~90 minutes
 
@@ -102,7 +102,7 @@ L1 và L2 là các trường hợp đặc biệt của chuẩn Lp:
 \lVert x \rVert_p = (|x_1|^p + |x_2|^p + \cdots + |x_n|^p)^{1/p}
 ```
 
-Các giá trị khác nhau của $p$tạo ra "cánh bóng đơn vị" có hình dạng khác nhau (số tất cả các điểm ở khoảng cách 1 từ nguồn):
+Các giá trị khác nhau của $p$tạo ra "cánh bóng đơn vị" có hình dạng khác nhau (số tất cả các điểm ở khoảng cách tối đa 1 từ nguồn gốc; hình dạng dưới đây là ranh giới của chúng):
 
 ```
 p=1:    Diamond shape      (corners on axes)
@@ -436,7 +436,7 @@ norm-unit-balls
 
 ### Bước 1: Tất cả các chức năng chuẩn và khoảng cách
 
-Nhìn xem`code/distances.py`Mỗi hàm được xây dựng từ đầu chỉ bằng toán học Python cơ bản.
+Nhìn xem`code/distances.py`cho việc thực hiện hoàn chỉnh. Mỗi hàm được xây dựng từ đầu chỉ sử dụng toán học Python cơ bản.`code/distances.ts`là một cổng TypeScript với các chức năng và demo tương tự.
 
 ### Bước 2: cùng dữ liệu, khoảng cách khác nhau, hàng xóm khác nhau
 

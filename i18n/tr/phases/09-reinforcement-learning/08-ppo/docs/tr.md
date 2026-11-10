@@ -3,7 +3,7 @@
 > A2C, her bir yüklenmenin bir güncelleştirmeden sonra atılmasını sağlar. PPO politika gradiyentiyi kesilmiş önem oranında sarar, böylece politika patlamadan aynı veriler üzerinde 10+ dönem yapabilirsiniz. Schulman et al. (2017).
 
 **Type:** Build
-**Languages:** Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 9 · 06 (REINFORCE), Phase 9 · 07 (Actor-Critic)
 **Time:** ~75 minutes
 
@@ -38,7 +38,7 @@ L^{\text{CLIP}}(\theta) = \mathbb{E}_t \left[ \min\left( r_t(\theta) A_t, \matho
 İki dönem:
 
 - Eğer avantajı $A_t > 0$ve oranın ötesine çıkmaya çalışması $1 + \epsilon$, klipi eğilimi düzeltir  iyi bir eylem daha fazla itmemek $+\epsilon$Eski olasılıkların üstünde.
-- Eğer avantajı $A_t < 0$ve oranın ötesine çıkmaya çalışması $1 - \epsilon$(yani kötü bir eylemin kesilmiş azaltılmasına kıyasla daha olası hale getirileceğini gösterir) Klip, gradiyenti kapatır  kötü bir eylemin aşağıya itirilmesini engellemez $-\epsilon$- Evet .
+- Eğer avantajı $A_t < 0$ve oran aşağı düşmeye çalışır.$1 - \epsilon$(yani kötü bir eylemin eski politikadan çok daha az olasılığını yapacağımızı gösterir) klip, eğilimi düzeltir: kötü bir eylemin daha ileriye doğru ilerlemesini önlemeyin.$-\epsilon$Eski olasılıktan aşağı.
 
 - Evet .`min`Diğer yönü ele alır: oran * yararlı* yönde hareket ettiyse, hala eğilimi alırsınız (bölgeye bir kesim yapmamak sizi incitebilir).
 

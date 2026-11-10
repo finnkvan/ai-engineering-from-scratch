@@ -3,7 +3,7 @@
 > Votre fonction de distance définit ce que signifie "semblable".
 
 **Type:** Build
-**Language:**Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 1, Lessons 01 (Linear Algebra Intuition), 02 (Vectors, Matrices & Operations)
 **Time:** ~90 minutes
 
@@ -102,7 +102,7 @@ L1 et L2 sont des cas particuliers de la norme Lp:
 \lVert x \rVert_p = (|x_1|^p + |x_2|^p + \cdots + |x_n|^p)^{1/p}
 ```
 
-Vérités différentes de $p$produire des "boulons d'unité" de différentes formes (l'ensemble de tous les points à distance 1 de l'origine):
+Vérités différentes de $p$produisent des "boulons d'unité" de différentes formes (l'ensemble de tous les points à une distance maximale de 1 de l'origine; les formes ci-dessous sont leurs limites):
 
 ```
 p=1:    Diamond shape      (corners on axes)
@@ -436,7 +436,7 @@ norm-unit-balls
 
 ### Étape 1: Toutes les fonctions de norme et de distance
 
-Regardez !`code/distances.py`Chaque fonction est construite à partir de zéro en utilisant uniquement les mathématiques de base Python.
+Regardez !`code/distances.py`Chaque fonction est construite à partir de zéro en utilisant uniquement les mathématiques de base Python.`code/distances.ts`est un port TypeScript avec les mêmes fonctions et démos.
 
 ### Étape 2: Les mêmes données, différentes distances, voisins différents
 

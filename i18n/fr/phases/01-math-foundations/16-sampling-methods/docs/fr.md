@@ -3,7 +3,7 @@
 > L'échantillonnage est la façon dont l'IA explore l'espace des possibilités.
 
 **Type:** Build
-**Language:**Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 1, Lessons 06-07 (Probability, Bayes' Theorem)
 **Time:** ~120 minutes
 
@@ -117,7 +117,8 @@ Algorithm:
   3. If u < p(x) / (M * q(x)), accept x
   4. Otherwise, reject and go to step 1
 
-Acceptance rate = 1/M
+Acceptance rate = Z/M, where Z is the integral of p(x)
+                (Z = 1, so the rate is 1/M, when p is normalized)
 ```
 
 Plus la limite est serrée$M$Dans les dimensions faibles (1-3), le prélèvement d'échantillons de rejet fonctionne bien. Dans les dimensions élevées, le taux d'acceptation diminue de manière exponentielle parce que la plupart du volume de proposition est rejeté.
@@ -607,6 +608,8 @@ def gumbel_softmax(logits, temperature):
 Montrez comment la baisse de la température fait approcher le vecteur de sortie d'un vecteur à chaud.
 
 Des mises en œuvre complètes avec toutes les visualisations sont en `code/sampling.py`- Je suis désolé .
+
+Le port TypeScript est activé `code/sampling.ts`Il utilise son propre générateur aléatoire semé, donc ses nombres aléatoires diffèrent de la sortie Python.
 
 ## Utilisez-le
 

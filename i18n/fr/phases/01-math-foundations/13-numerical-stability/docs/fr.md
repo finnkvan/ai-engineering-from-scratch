@@ -3,7 +3,7 @@
 > Le point flottant est une abstraction fuyant.
 
 **Type:** Build
-**Language:**Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 1, Lessons 01-04
 **Time:** ~120 minutes
 
@@ -184,7 +184,7 @@ exp(101) = 7.31e43
 exp(102) = 1.99e44
 sum      = 2.99e44
 
-These overflow float32 (max ~3.4e38)? No, 2.69e43 < 3.4e38? Actually:
+2.69e43 > 3.4e38, the float32 maximum, so every term overflows.
 exp(88.7) is already at the float32 limit.
 exp(100) = inf in float32.
 ```
@@ -558,7 +558,7 @@ check_tensor("bad",  [1.0, float('nan'), 3.0])
 check_tensor("ugly", [1.0, float('inf'), 3.0])
 ```
 
-Regardez !`code/numerical.py`pour des mises en œuvre complètes avec toutes les situations de bord démontrées.
+Regardez !`code/numerical.py`Les résultats de l'étude ont été obtenus en vue de la réalisation complète de tous les cas de bord démontrés.`code/numerical.ts`est un port TypeScript avec les mêmes fonctions et démos.
 
 ## La faire partir
 

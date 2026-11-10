@@ -5,7 +5,7 @@
 > **Spec note (2026-07-28):**动态客户端注册被废除以支持客户端ID元数据文件.DCR仍然是一个兼容性机制.当它被使用时,客户端声明正确的`application_type`客户验证现有RFC 9207`iss`授权服务器发行商之间永远不会重复使用凭证.
 
 **Type:** Build
-**Languages:** Python (stdlib)
+**Languages:** Python (stdlib), TypeScript
 **Prerequisites:** Phase 13 · 16 (OAuth 2.1 state machine), Phase 13 · 17 (gateways)
 **Time:** ~90 minutes
 
@@ -329,6 +329,7 @@ t3-jwks-rotate
 ```bash
 cd phases/13-tools-and-protocols/18-mcp-auth-production
 python3 code/main.py
+npx tsx code/main.ts
 python3 -m unittest discover -s code/tests -v
 ```
 
@@ -354,7 +355,7 @@ python3 -m unittest discover -s code/tests -v
 
 ## 运动
 
-1. 跑步`code/main.py`观察如何在第6步中旋转键,`refresh_jwks`重新拉出已发布的集,既旧的代币 (重叠窗口),又新的代币都在重新启动的情况下验证.
+1. 跑步`code/main.py`追踪流量. 观察 IdP如何在脚本输出第6步 (上述流量的第7步) 中旋转键,`refresh_jwks`重新拉出已发布的集,既旧的代币 (重叠窗口),又新的代币都在重新启动的情况下验证.
 
 2. 添加一个新的IDP到保护资源的元数据`authorization_servers`发行一个签署的代币,并确认验证者接受它.发行一个签署的代币,并确认验证者拒绝.`WWW-Authenticate: Bearer error="invalid_token", error_description="iss not allowed"`现在,我们要去.
 

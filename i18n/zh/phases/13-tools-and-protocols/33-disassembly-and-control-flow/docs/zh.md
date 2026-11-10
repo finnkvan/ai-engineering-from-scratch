@@ -3,7 +3,7 @@
 > 拆除列表是关于哪些字节是指令的索赔,这个课程构建了检查索的解码器和图表.
 
 **Type:** Build
-**Languages:** Python, C, x86-64 assembly
+**Languages:** Python, TypeScript, C, x86-64 assembly
 **Prerequisites:** Phase 13 · 32 (ELF from scratch)
 **Time:** ~150 minutes
 
@@ -347,6 +347,7 @@ rea 6.5.0 与Ghidra 12.1.4提供商返回函数的列表文本`procedure_assembl
 ```bash
 cd phases/13-tools-and-protocols/33-disassembly-and-control-flow
 python3 code/main.py
+npx tsx code/main.ts
 ```
 
 输出是一个JSON报告.对于每个固定对象,它给出了预言协议.对于每个函数,它给出了指令,区块和边缘计算在三个方法下.它还列出无法达到的区块,未解决的间接跳跃,后边缘,直接主导者和任何表.它结束了陷比较.
@@ -471,6 +472,30 @@ analysis.cfg.back_edges()
 
 成功意味着`python3 code/main.py cfg`给每一个可能的电话,以及证明的移动,
 
+## 排名实验室
+
+找到你构建的代码,然后写在`code/lab_answers.json`写数字作为数字或六字符串,例如`"0x40"`它们是JSON列表.
+
+1. `t1`指示:在 -O1级下降复发式解码.
+2. `t2`基本块总量在 -O1
+3. `t3`: 循环头的总地址在 -O1上,为 hex.
+4. `t4`:在 sweep-trap.o 中,直线扫描说明包含0x14的地址开始,如hex.
+5. `t5`排列表中 -O0的入口
+
+检查你的答案:
+
+```bash
+cd phases/13-tools-and-protocols/33-disassembly-and-control-flow
+python3 code/lab.py
+npx tsx code/lab.ts
+```
+
+检查器从 计算出每一个预期值`code/main.py`它们在已完成的设备上.`PASS`现在`FAIL`或`TODO`只有五个任务都通过时,它才会出于0.`python3 code/lab.py my-answers.json`检查另一个文件.`code/tests/test_lab.py`证明检查员接受正确的答案,却拒绝错误的答案.
+
+### 看它运行
+
+其他[Inside a Decompiler](https://aiengineeringfromscratch.com/inside-a-decompiler?program=trap&sweep=linear)机器将这个课程运行为其解码床和块板.`sweep-trap.o`线性扫描:床显示四个数据字节被解码为代码,一个标记跳跃目标在`0x14`在内`addq`在`0x13`调动解码器到回归降值,看看跳跃跳过数据.
+
 ## 教训艺术品
 
 这一课包括`outputs/skill-disassembly-and-control-flow.md`通过它将对象和函数名称转化为检查列表,区块,打字边缘,主导器和任何未解决的转移.它需要预言比较,拆除方法,字节会计,每个恢复表的迁移证据以及未知的情况的声明.
@@ -482,6 +507,7 @@ analysis.cfg.back_edges()
 ```bash
 cd phases/13-tools-and-protocols/33-disassembly-and-control-flow
 python3 code/main.py
+npx tsx code/main.ts
 python3 code/tests/test_main.py
 ```
 

@@ -3,7 +3,7 @@
 > 互动结果仍然是MCP工具和资源交换. 2026-07-28的核心使交换自主,而应用程序扩展增加了沙盒浏览器表面.
 
 **Type:** Build
-**Languages:** Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 13 · 07 (MCP server), Phase 13 · 10 (resources)
 **Time:** ~75 minutes
 
@@ -265,10 +265,11 @@ t3-ui-sandbox
 ```bash
 cd phases/13-tools-and-protocols/14-mcp-apps
 python3 code/main.py
+npx tsx code/main.ts
 python3 -m unittest discover code/tests -v
 ```
 
-检查输出中的四个东西:
+检查输出中的五件事:
 
 1. 每次电话都是独立的.
 2. 每个要求都有`_meta`能否实现.

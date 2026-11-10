@@ -3,7 +3,7 @@
 > 编译程序是指向彼此的表格集合.你写的读者提供了输出,你可以对字节进行检查.
 
 **Type:** Build
-**Languages:** Python (stdlib), C (fixture only)
+**Languages:** Python (stdlib), TypeScript, C (fixture only)
 **Prerequisites:** Phase 0 · 01 (Dev Environment) with clang installed, Python 3.10 or later, hexadecimal arithmetic
 **Time:** ~120 minutes
 
@@ -275,6 +275,7 @@ Load commands:
 ```bash
 cd phases/13-tools-and-protocols/32-program-anatomy-elf-from-scratch
 python3 code/main.py
+npx tsx code/main.ts
 ```
 
 演示内容是`ledger-x86_64-O1.o`然后打印了其标题,部分,符号,移动和文件偏移地图.`ledger-arm64-O1.o`图表的标题是" 图表"的标题.`tiny-x86_64`预期的行:
@@ -380,6 +381,30 @@ macho.function_bytes("_percent_change")[:4].hex()
 
 成功意味着进口列表,细节地图和每个函数范围都与捕获的工具输出一致,在测试期间没有工具运行.
 
+## 排名实验室
+
+找到你构建的代码,然后写在`code/lab_answers.json`写数字作为数字或六字符串,例如`"0x40"`它们是JSON列表.
+
+1. `t1`作为一个数字,以本书x86_64-O1.o的 e_shoff.
+2. `t2`: 百分比变化在本书中-x86_64-O1.o.
+3. `t3`: 在本书-x86_64-O1.o 中 .text的文件转移,作为 hex.
+4. `t4`:在本书x86_64-O0.o中重新迁移类型名称,分类,作为列表.
+5. `t5`:在本书-x86_64-O1.o中,作为列表.
+
+检查你的答案:
+
+```bash
+cd phases/13-tools-and-protocols/32-program-anatomy-elf-from-scratch
+python3 code/lab.py
+npx tsx code/lab.ts
+```
+
+检查器从 计算出每一个预期值`code/main.py`它们在已完成的设备上.`PASS`现在`FAIL`或`TODO`只有五个任务都通过时,它才会出于0.`python3 code/lab.py my-answers.json`检查另一个文件.`code/tests/test_lab.py`证明检查员接受正确的答案,却拒绝错误的答案.
+
+### 看它运行
+
+其他[Inside a Decompiler](https://aiengineeringfromscratch.com/inside-a-decompiler)机器将这个课程运行作为其前两个站点. 卷轴读取包含的对象文件的标题.`percent_change`开放了柜子`.text`切换符号,看图表中包含哪些事实.
+
 ## 教训艺术品
 
 这一课产生了`outputs/skill-program-anatomy-elf-from-scratch.md`通过使用CLAUD,Cursor,Codex,OpenClaw,Hermes或任何读SKILL.md的代理.该技能将用户构建的编译对象或可执行的执行器变成布局报告.报告显示每个结构,符号和迁移的文件范围,与捕获的工具输出进行检查.
@@ -391,6 +416,7 @@ macho.function_bytes("_percent_change")[:4].hex()
 ```bash
 cd phases/13-tools-and-protocols/32-program-anatomy-elf-from-scratch
 python3 code/main.py
+npx tsx code/main.ts
 python3 -m unittest discover -s code/tests -v
 ```
 

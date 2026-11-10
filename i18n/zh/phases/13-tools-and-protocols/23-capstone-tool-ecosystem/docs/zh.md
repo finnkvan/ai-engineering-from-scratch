@@ -3,7 +3,7 @@
 > 生产代理系统是一个界限集,而不是一个功能堆. 这块结石分开了可读的过程模拟,从协议客户端,授权服务器,沙箱和远程仪表出口者,一个实际部署仍然需要.
 
 **Type:** Build
-**Languages:** Python (stdlib, in-process simulation)
+**Languages:** Python (stdlib, in-process simulation), TypeScript
 **Prerequisites:** Phase 13 · 01 through 22, using MCP revision `2026-07-28`
 **Time:** ~120 minutes
 
@@ -203,9 +203,10 @@ t3-capstone-chain
 ```bash
 cd phases/13-tools-and-protocols/23-capstone-tool-ecosystem
 python3 code/main.py
+npx tsx code/main.ts
 ```
 
-检查五件事:
+检查六件事:
 
 1. `server/discover`宣传修订`2026-07-28`并且扩展任务.
 2. 爱丽丝可以读取和生成报告,而勃的写作电话被拒绝.

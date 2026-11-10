@@ -3,7 +3,7 @@
 > نمونه گیری این است که چگونه هوش مصنوعی فضای امکانات را کشف می کند.
 
 **Type:** Build
-**Language:**پیتون
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 1, Lessons 06-07 (Probability, Bayes' Theorem)
 **Time:** ~120 minutes
 
@@ -117,7 +117,8 @@ Algorithm:
   3. If u < p(x) / (M * q(x)), accept x
   4. Otherwise, reject and go to step 1
 
-Acceptance rate = 1/M
+Acceptance rate = Z/M, where Z is the integral of p(x)
+                (Z = 1, so the rate is 1/M, when p is normalized)
 ```
 
 هرچه تنگ تر باشه$M$در ابعاد پایین (1-3) ، نمونه گیری رد خوب کار می کند. در ابعاد بالا، نرخ پذیرش به طور نمایی کاهش می یابد زیرا بیشتر حجم پیشنهاد رد می شود. این لعنتی از ابعاد برای نمونه گیری رد است.
@@ -607,6 +608,8 @@ def gumbel_softmax(logits, temperature):
 نشان دهید که چگونه کاهش دمای باعث می شود که خروجی به یک ویکتور یک گرم نزدیک شود.
 
 پیاده سازی کامل با تمام تصویرسازی ها در حال انجام است `code/sampling.py`. .
+
+پورت تایپ اسکریپت فعال شده است`code/sampling.ts`از ژنراتور تصادفی خود استفاده می کند، بنابراین اعداد تصادفی آن از تولید پایتون متفاوت است.
 
 ## ازش استفاده کن
 

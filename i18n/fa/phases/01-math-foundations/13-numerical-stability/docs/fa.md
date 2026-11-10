@@ -3,7 +3,7 @@
 > نقطه شناور یک تجرّئ نفوذی است. در طول تمرین شما را گاز می گیرد و نمی بینید که می آید.
 
 **Type:** Build
-**Language:**پیتون
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 1, Lessons 01-04
 **Time:** ~120 minutes
 
@@ -184,7 +184,7 @@ exp(101) = 7.31e43
 exp(102) = 1.99e44
 sum      = 2.99e44
 
-These overflow float32 (max ~3.4e38)? No, 2.69e43 < 3.4e38? Actually:
+2.69e43 > 3.4e38, the float32 maximum, so every term overflows.
 exp(88.7) is already at the float32 limit.
 exp(100) = inf in float32.
 ```
@@ -558,7 +558,7 @@ check_tensor("bad",  [1.0, float('nan'), 3.0])
 check_tensor("ugly", [1.0, float('inf'), 3.0])
 ```
 
-ببین`code/numerical.py`برای اجرای کامل با تمام موارد کناری نشان داده شده.
+ببین`code/numerical.py`برای اجرای کامل با تمام موارد کناری نشان داده شده است.`code/numerical.ts`یک پورت تایپ اسکریپت با همان عملکرد و نمایش ها است.
 
 ## -باده
 

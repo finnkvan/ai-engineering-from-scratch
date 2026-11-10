@@ -3,7 +3,7 @@
 > La muestreo es la forma en que la IA explora el espacio de posibilidades.
 
 **Type:** Build
-**Language:**Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 1, Lessons 06-07 (Probability, Bayes' Theorem)
 **Time:** ~120 minutes
 
@@ -117,7 +117,8 @@ Algorithm:
   3. If u < p(x) / (M * q(x)), accept x
   4. Otherwise, reject and go to step 1
 
-Acceptance rate = 1/M
+Acceptance rate = Z/M, where Z is the integral of p(x)
+                (Z = 1, so the rate is 1/M, when p is normalized)
 ```
 
 Cuanto más estrecha sea la línea$M$En las dimensiones bajas (1-3), el muestreo de rechazo funciona bien. En las dimensiones altas, la tasa de aceptación disminuye exponencialmente porque la mayor parte del volumen de la propuesta es rechazada. Esta es la maldición de dimensionalidad para el muestreo de rechazo.
@@ -607,6 +608,8 @@ def gumbel_softmax(logits, temperature):
 Muestre cómo la disminución de la temperatura hace que la salida se acerque a un vector de un solo calor.
 
 Las implementaciones completas con todas las visualizaciones están en `code/sampling.py`¿ Qué ?
+
+El puerto de TypeScript está en `code/sampling.ts`Utiliza su propio generador aleatorio semillado, por lo que sus números aleatorios difieren de la salida de Python.
 
 ## Usalo
 

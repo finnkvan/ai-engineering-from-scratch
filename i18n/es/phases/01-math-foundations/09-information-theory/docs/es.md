@@ -3,7 +3,7 @@
 > La teoría de la información mide la sorpresa y las funciones de pérdida se basan en ella.
 
 **Type:** Learn
-**Language:**Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 1, Lesson 06 (Probability)
 **Time:** ~60 minutes
 
@@ -202,7 +202,7 @@ Propiedades:
 2. Las características de clasificación por puntaje MI.
 3. Mantenga la parte superior .$k$características.
 
-Esto funciona para cualquier relación entre la característica y el objetivo, lineal, no lineal, monótono o no. La correlación sólo capta las relaciones lineares. MI capta todo.
+Esto funciona para cualquier relación entre característica y objetivo - lineal, no lineal, monótono o no. La correlación de Pearson sólo capta relaciones lineal. MI capta cualquier dependencia, pero con datos finitos su estimación necesita suficientes muestras y un enlace sensato.
 
 | Method | Detects | Computational cost | Handles categorical? |
 |--------|---------|-------------------|---------------------|

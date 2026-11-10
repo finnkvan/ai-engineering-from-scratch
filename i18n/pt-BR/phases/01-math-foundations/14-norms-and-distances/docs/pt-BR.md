@@ -3,7 +3,7 @@
 > A função de distância define o que significa "semelhante".
 
 **Type:** Build
-**Language:**Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 1, Lessons 01 (Linear Algebra Intuition), 02 (Vectors, Matrices & Operations)
 **Time:** ~90 minutes
 
@@ -102,7 +102,7 @@ L1 e L2 são casos especiais da norma Lp:
 \lVert x \rVert_p = (|x_1|^p + |x_2|^p + \cdots + |x_n|^p)^{1/p}
 ```
 
-Valores diferentes de $p$produzir "bolas de unidade" de diferentes formas (o conjunto de todos os pontos na distância 1 da origem):
+Valores diferentes de $p$Produzir "bolas de unidade" de diferentes formas (o conjunto de todos os pontos a uma distância máxima de 1 da origem; as formas abaixo são as suas fronteiras):
 
 ```
 p=1:    Diamond shape      (corners on axes)
@@ -436,7 +436,7 @@ norm-unit-balls
 
 ### Passo 1: Todas as funções normais e de distância
 
-Veja .`code/distances.py`Cada função é construída a partir do zero usando apenas matemática básica Python.
+Veja .`code/distances.py`Cada função é construída a partir do zero usando apenas matemática básica Python.`code/distances.ts`é uma porta TypeScript com as mesmas funções e demos.
 
 ### Passo 2: Os mesmos dados, distâncias diferentes, vizinhos diferentes
 

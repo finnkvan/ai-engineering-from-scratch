@@ -3,7 +3,7 @@
 > TF-IDF, 2026'da da iyi tanımlanmış görevlerde yerleşimleri yenmeye devam ediyor.
 
 **Type:** Build
-**Languages:** Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 5 · 01 (Text Processing), Phase 2 · 02 (Linear Regression from Scratch)
 **Time:** ~75 minutes
 
@@ -126,7 +126,7 @@ def tfidf(bow_matrix):
 >>> tfidf(bow)
 ```
 
-Üç belge, beş kelime kelime (`the`- Evet .`cat`- Evet .`sat`- Evet .`dog`- Evet .`ran` ).`the`Üçünde de görülüyor, bu yüzden IDF'si düşük.`dog`Vectörler nadir (çoğu giriş küçüktür) ve ayrımcı kelimeler pop.
+Üç belge, beş kelime kelime (`the`- Evet .`cat`- Evet .`sat`- Evet .`dog`- Evet .`ran` ).`the`Üçünde de görülüyor, bu yüzden IDF'si düşük.`dog`Bu, bir kez daha çok sözcüklü bir kelime ve bu vektörlerin sayısı çok azdır.
 
 ### Adım 5: L2- sırayı normalleştir
 

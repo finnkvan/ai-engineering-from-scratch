@@ -3,7 +3,7 @@
 > A2C arroja cada implementación después de una actualización. PPO envuelve el gradiente de política en una relación de importancia reducida para que pueda hacer 10+ épocas en los mismos datos sin que la política explode. Schulman et al. (2017).
 
 **Type:** Build
-**Languages:** Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 9 · 06 (REINFORCE), Phase 9 · 07 (Actor-Critic)
 **Time:** ~75 minutes
 
@@ -38,7 +38,7 @@ L^{\text{CLIP}}(\theta) = \mathbb{E}_t \left[ \min\left( r_t(\theta) A_t, \matho
 Dos términos:
 
 - Si la ventaja es$A_t > 0$y la proporción trata de crecer más allá $1 + \epsilon$, el clip aplanar el gradiente  no empujar una buena acción más allá de $+\epsilon$por encima de la antigua probabilidad.
-- Si la ventaja es$A_t < 0$y la proporción trata de crecer más allá $1 - \epsilon$(lo que significa que haríamos una mala acción más probable en comparación con su reducción recortada), el clip tapa el gradiente  no empujar una mala acción por debajo $-\epsilon$¿ Qué ?
+- Si la ventaja es$A_t < 0$y la proporción intenta caer por debajo $1 - \epsilon$(lo que significa que haríamos que una mala acción fuera mucho menos probable que la vieja política), el clip aplanía el gradiente: no empujes una mala acción más allá de $-\epsilon$por debajo de la antigua probabilidad.
 
 El `min`maneja la otra dirección: si la relación se ha movido en la dirección *beneficial* , todavía obtiene el gradiente (no hay recorte en el lado que le perjudique).
 

@@ -3,7 +3,7 @@
 > A2C ném đi mỗi rollout sau một bản cập nhật. PPO gói gradient chính sách trong một tỷ lệ quan trọng bị cắt giảm để bạn có thể làm 10+ thời đại trên cùng một dữ liệu mà không bị chính sách nổ. Schulman et al. (2017).
 
 **Type:** Build
-**Languages:** Python
+**Languages:** Python, TypeScript
 **Prerequisites:** Phase 9 · 06 (REINFORCE), Phase 9 · 07 (Actor-Critic)
 **Time:** ~75 minutes
 
@@ -38,7 +38,7 @@ L^{\text{CLIP}}(\theta) = \mathbb{E}_t \left[ \min\left( r_t(\theta) A_t, \matho
 Hai điều khoản:
 
 - Nếu lợi thế $A_t > 0$và tỷ lệ cố gắng tăng lên qua $1 + \epsilon$, clip làm phẳng gradient  không đẩy một hành động tốt hơn $+\epsilon$trên khả năng cũ.
-- Nếu lợi thế $A_t < 0$và tỷ lệ cố gắng tăng lên qua $1 - \epsilon$(có nghĩa là chúng ta sẽ làm cho một hành động xấu có khả năng hơn so với việc cắt giảm), clip                                                                                                                                                                                                                                                   $-\epsilon$- Tôi không biết.
+- Nếu lợi thế $A_t < 0$và tỷ lệ cố gắng giảm xuống dưới $1 - \epsilon$(có nghĩa là chúng ta sẽ làm cho một hành động xấu ít có khả năng hơn nhiều so với chính sách cũ), clip làm phẳng gradient: không đẩy một hành động xấu xa hơn $-\epsilon$dưới xác suất cũ.
 
 - `min`xử lý hướng khác: nếu tỷ lệ đã di chuyển theo hướng * hữu ích *, bạn vẫn nhận được độ nghiêng (không cắt trên mặt mà sẽ làm tổn thương bạn).
 
